@@ -16,5 +16,6 @@ FROM registry.access.redhat.com/ubi8/python-36
 WORKDIR /todo-python
 COPY . .
 RUN pip install -r requirements.txt
+USER 10014
 EXPOSE 5000
 CMD ["python", "app.py"]
